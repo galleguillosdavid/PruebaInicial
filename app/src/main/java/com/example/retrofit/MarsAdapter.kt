@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.item_list_view.view.*
 
 class MarsAdapter(var mPassMars: Mars): RecyclerView.Adapter<MarsAdapter.TaskViewHolder>() {
     private var dataList = emptyList<Terrain>()// paso 1
-    fun updateList(mDataList:List<Terrain>){// paso 2
+    fun updateListM(mDataList:List<Terrain>){// paso 2
         dataList=mDataList
         notifyDataSetChanged()
     }
