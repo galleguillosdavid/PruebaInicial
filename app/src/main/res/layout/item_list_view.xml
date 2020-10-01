@@ -7,9 +7,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="214dp"
-        android:layout_height="181dp"
-        android:scaleType="centerCrop"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:clickable="false"
+        android:scaleType="matrix"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

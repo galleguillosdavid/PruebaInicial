@@ -1,9 +1,9 @@
-package ViewModel
+package com.example.retrofit.ViewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.example.retrofit.model.Repository
-import com.example.retrofit.model.dcGeneral
+import com.example.retrofit.model.Retrofit.Repository
+import com.example.retrofit.model.Retrofit.dcGeneral
 
 class GeneralViewModel:ViewModel() {
     private val  repository= Repository()

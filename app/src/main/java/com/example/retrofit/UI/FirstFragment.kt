@@ -1,6 +1,6 @@
-package UI
+package com.example.retrofit.UI
 
-import ViewModel.GeneralViewModel
+import com.example.retrofit.ViewModel.GeneralViewModel
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -13,15 +13,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 
-import com.example.retrofit.GeneralAdapter
+import com.example.retrofit.model.RecyclerView.GeneralAdapter
 import com.example.retrofit.R
-import com.example.retrofit.model.dcGeneral
+import com.example.retrofit.model.Retrofit.dcGeneral
 import kotlinx.android.synthetic.main.fragment_first.*
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FirstFragment : Fragment(), GeneralAdapter.Mars {
+class FirstFragment : Fragment(), GeneralAdapter.General {
 
     lateinit var mViewModel: GeneralViewModel
 
@@ -45,7 +45,7 @@ class FirstFragment : Fragment(), GeneralAdapter.Mars {
         val mAdapter = GeneralAdapter(this)
 
         mRecyclerView.adapter = mAdapter
-        mRecyclerView.layoutManager = GridLayoutManager(context,2)
+        mRecyclerView.layoutManager = GridLayoutManager(context,3)
 
         mViewModel.exposeLiveDataFromServer().observe(viewLifecycleOwner, Observer {
             Log.d("view",it.toString())
@@ -57,7 +57,7 @@ class FirstFragment : Fragment(), GeneralAdapter.Mars {
         }
     }
 
-    override fun passMars(mTerrain: dcGeneral) {
+    override fun passGeneral(mTerrain: dcGeneral) {
         TODO("Not yet implemented")
     }
 }

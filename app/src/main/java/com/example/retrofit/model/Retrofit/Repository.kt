@@ -1,4 +1,4 @@
-package com.example.retrofit.model
+package com.example.retrofit.model.Retrofit
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
