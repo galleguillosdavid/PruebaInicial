@@ -1,16 +1,16 @@
-package com.example.retrofit
+package ViewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.example.retrofit.model.Repository
-import com.example.retrofit.model.Terrain
+import com.example.retrofit.model.dcGeneral
 
-class MarsViewModel:ViewModel() {
+class GeneralViewModel:ViewModel() {
     private val  repository= Repository()
     init {
         repository.getDataFromServer()
     }
-    fun exposeLiveDataFromServer(): LiveData<List<Terrain>> {
+    fun exposeLiveDataFromServer(): LiveData<List<dcGeneral>> {
         return repository.mLiveData
     }
 }

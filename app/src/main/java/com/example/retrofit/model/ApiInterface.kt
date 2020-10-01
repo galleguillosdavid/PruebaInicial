@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface ApiInterface {
     @GET("realestate")
-    fun getDataFromApi(): Call<List<Terrain>>
+    fun getDataFromApi(): Call<List<dcGeneral>>
 
 }

@@ -3,15 +3,14 @@ package com.example.retrofit
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.retrofit.model.Terrain
+import com.example.retrofit.model.dcGeneral
 import kotlinx.android.synthetic.main.item_list_view.view.*
 
-class MarsAdapter(var mPassMars: Mars): RecyclerView.Adapter<MarsAdapter.TaskViewHolder>() {
-    private var dataList = emptyList<Terrain>()// paso 1
-    fun updateListM(mDataList:List<Terrain>){// paso 2
+class GeneralAdapter(var mPassMars: Mars): RecyclerView.Adapter<GeneralAdapter.TaskViewHolder>() {
+    private var dataList = emptyList<dcGeneral>()// paso 1
+    fun updateListM(mDataList:List<dcGeneral>){// paso 2
         dataList=mDataList
         notifyDataSetChanged()
     }
@@ -31,13 +30,13 @@ class MarsAdapter(var mPassMars: Mars): RecyclerView.Adapter<MarsAdapter.TaskVie
     }
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
-        val mTerrain: Terrain = dataList[position]
+        val mTerrain: dcGeneral = dataList[position]
         Glide.with(holder.itemView.context).load(mTerrain.imgSrc).into(holder.imgTerrain)
     }
 
     override fun getItemCount(): Int = dataList.size
 
     interface Mars{ //Paso 6
-        fun passMars(mTerrain: Terrain)
+        fun passMars(mTerrain: dcGeneral)
     }
 }

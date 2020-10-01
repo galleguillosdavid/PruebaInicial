@@ -1,34 +1,33 @@
-package com.example.retrofit
+package UI
 
+import ViewModel.GeneralViewModel
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.Button
-import android.widget.GridLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.retrofit.model.Terrain
+
+import com.example.retrofit.GeneralAdapter
+import com.example.retrofit.R
+import com.example.retrofit.model.dcGeneral
 import kotlinx.android.synthetic.main.fragment_first.*
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FirstFragment : Fragment(), MarsAdapter.Mars {
+class FirstFragment : Fragment(), GeneralAdapter.Mars {
 
-    lateinit var mViewModel: MarsViewModel
+    lateinit var mViewModel: GeneralViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mViewModel = ViewModelProvider(this).get(MarsViewModel::class.java)
+        mViewModel = ViewModelProvider(this).get(GeneralViewModel::class.java)
     }
 
     override fun onCreateView(
@@ -43,7 +42,7 @@ class FirstFragment : Fragment(), MarsAdapter.Mars {
         super.onViewCreated(view, savedInstanceState)
 
         val mRecyclerView = recyclerView1
-        val mAdapter = MarsAdapter(this)
+        val mAdapter = GeneralAdapter(this)
 
         mRecyclerView.adapter = mAdapter
         mRecyclerView.layoutManager = GridLayoutManager(context,2)
@@ -58,7 +57,7 @@ class FirstFragment : Fragment(), MarsAdapter.Mars {
         }
     }
 
-    override fun passMars(mTerrain: Terrain) {
+    override fun passMars(mTerrain: dcGeneral) {
         TODO("Not yet implemented")
     }
 }
