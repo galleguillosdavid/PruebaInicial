@@ -10,10 +10,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.retrofit.R
+import com.example.retrofit.model.RecyclerView.GeneralAdapter
+import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.dcPersonajesRAM
+import kotlinx.android.synthetic.main.fragment_first.*
 
 
-class FirstFragment : Fragment() {
+class FirstFragment : Fragment(), GeneralAdapter.RAM {
 
     lateinit var mViewmodel: GeneralViewModel
 // 1 declaro la variable del view model
@@ -34,13 +38,25 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val mRecyclerView = recyclerView1
+        val mAdapter = GeneralAdapter(this)
+        mRecyclerView.adapter = mAdapter
+        mRecyclerView.layoutManager = GridLayoutManager(context,3)
+
         mViewmodel.exposeLiveDataFromServer().observe(viewLifecycleOwner, Observer {
 //      Observo que la funcion retorne un live data desde el viewmodel
             Log.d("prueba", it.toString())
+
+            mAdapter.updatelistRM(it)
         })
 //        view.findViewById<Button>(R.id.button_first).setOnContextClickListener{
 //            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
 //        }
+    }
+
+    override fun enviardatos(mdcPersonajesRAM: dcPersonajesRAM) {
+        TODO("Not yet implemented")
     }
 }
 // luego crear el recycler view,
