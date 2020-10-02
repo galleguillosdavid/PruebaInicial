@@ -56,7 +56,7 @@ class FirstFragment : Fragment(), GeneralAdapter.RAM {
     }
 
     override fun enviardatos(mdcPersonajesRAM: dcPersonajesRAM) {
-        TODO("Not yet implemented")
+
     }
 }
 // luego crear el recycler view,

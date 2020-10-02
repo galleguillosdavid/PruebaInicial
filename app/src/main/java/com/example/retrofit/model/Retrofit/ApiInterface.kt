@@ -7,5 +7,5 @@ import retrofit2.http.GET
 
 interface ApiInterface {
     @GET("character")
-    fun getDataFromApi(): Call<List<dcPersonajesRAM>>
+    fun getDataFromApi(): Call<dcPersonajesRAM>
 }

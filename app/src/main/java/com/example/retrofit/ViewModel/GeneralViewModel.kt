@@ -10,7 +10,7 @@ class GeneralViewModel:ViewModel() {
     init {
         repository.getDataFromServer()
     }
-    fun exposeLiveDataFromServer(): MutableLiveData<List<dcPersonajesRAM>> {
+    fun exposeLiveDataFromServer(): MutableLiveData<dcPersonajesRAM> {
         return repository.mLiveData
     }
 }
