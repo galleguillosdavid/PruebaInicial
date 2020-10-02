@@ -22,8 +22,8 @@ class GeneralAdapter(var mpassPersonajesRAM: FirstFragment): RecyclerView.Adapte
     }
 
     inner class ThisViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener{
-
-       var imgRM = itemView.imageView
+        var textview1  = itemView.textView1
+        var imgRM = itemView.imageView
         var itemView = itemView.setOnClickListener(this)//c9 m1:30
 
 
@@ -40,7 +40,8 @@ class GeneralAdapter(var mpassPersonajesRAM: FirstFragment): RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: GeneralAdapter.ThisViewHolder, position: Int) {//c9 m 1:57
         val mDcPersonajesRAM : Result = dataList[position]
-       Glide.with(holder.itemView.context).load(mDcPersonajesRAM.image).into(holder.imgRM)
+        Glide.with(holder.itemView.context).load(mDcPersonajesRAM.image).into(holder.imgRM)
+        holder.textview1.text = mDcPersonajesRAM.name
 
     }
 
