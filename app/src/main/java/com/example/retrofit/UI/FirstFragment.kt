@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.retrofit.R
 import com.example.retrofit.model.RecyclerView.GeneralAdapter
-import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.dcPersonajesRAM
+import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Result.Result
 import kotlinx.android.synthetic.main.fragment_first.*
 
 
@@ -55,7 +55,7 @@ class FirstFragment : Fragment(), GeneralAdapter.RAM {
 //        }
     }
 
-    override fun enviardatos(mdcPersonajesRAM: dcPersonajesRAM) {
+    override fun enviardatos(mdcPersonajesRAM: Result) {
 
     }
 }
