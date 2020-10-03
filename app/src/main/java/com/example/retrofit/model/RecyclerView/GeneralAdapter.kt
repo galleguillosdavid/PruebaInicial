@@ -13,6 +13,7 @@ import com.example.retrofit.UI.FirstFragment
 import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Result.Result
 import kotlinx.android.synthetic.main.item_list_view.view.*
 
+//C7 m 1:01
 class GeneralAdapter(firstFragment: FirstFragment) : RecyclerView.Adapter<GeneralAdapter.ThisViewHolder>() {
 
 private var dataList = emptyList<Result>() // c7 m 1:00

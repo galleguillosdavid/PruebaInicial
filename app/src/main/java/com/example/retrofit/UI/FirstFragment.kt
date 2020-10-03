@@ -10,6 +10,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.retrofit.R
 import com.example.retrofit.model.RecyclerView.GeneralAdapter
@@ -39,10 +41,10 @@ class FirstFragment : Fragment(), GeneralAdapter.RAM {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val mRecyclerView = recyclerView1
-        val mAdapter = GeneralAdapter(this)
-        mRecyclerView.adapter = mAdapter
-        mRecyclerView.layoutManager = GridLayoutManager(context,3)
+        val mRecyclerView = recyclerView1 //c7 m1:22 instancio el elemento visual Rv
+        val mAdapter = GeneralAdapter(this)//c7 m1:23 instancio el objeto de la clase adapter
+        mRecyclerView.adapter = mAdapter //c7 m1:25
+        mRecyclerView.layoutManager = GridLayoutManager(context,3) //c7 m1:25
 
         mViewmodel.exposeLiveDataFromServer().observe(viewLifecycleOwner, Observer {
 //      Observo que la funcion retorne un live data desde el viewmodel
@@ -50,19 +52,20 @@ class FirstFragment : Fragment(), GeneralAdapter.RAM {
 
             mAdapter.updatelistRM(it)
         })
-//        view.findViewById<Button>(R.id.button_first).setOnContextClickListener{
-//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-//        }
+
     }
 
     override fun enviardatos(mdcPersonajesRAM: Result) {
 
-        /*
+
             val mBundle = Bundle()
-            mBundle.putInt("id", mTask.id)
-            Toast.makeText(context,mTask.id.toString(), Toast.LENGTH_LONG).show()
+            mBundle.putString("creado", mdcPersonajesRAM.created)
+            mBundle.putString("especie", mdcPersonajesRAM.species)
+            mBundle.putString("nombre", mdcPersonajesRAM.name)
+            mBundle.putString("estado", mdcPersonajesRAM.status)
+            mBundle.putString("genero", mdcPersonajesRAM.gender)
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, mBundle)
-        */
+
     }
 }
 // luego crear el recycler view,
