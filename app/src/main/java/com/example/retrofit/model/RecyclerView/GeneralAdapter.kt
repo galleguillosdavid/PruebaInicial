@@ -13,24 +13,25 @@ import com.example.retrofit.UI.FirstFragment
 import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Result.Result
 import kotlinx.android.synthetic.main.item_list_view.view.*
 
-//C7 m 1:01
-class GeneralAdapter(firstFragment: FirstFragment) : RecyclerView.Adapter<GeneralAdapter.ThisViewHolder>() {
+//C7 m 1:01 y c7 m3:30 aprox
+class GeneralAdapter(var enviarDatos: EnviarDatos ) : RecyclerView.Adapter<GeneralAdapter.ThisViewHolder>() {
 
 private var dataList = emptyList<Result>() // c7 m 1:00
+
 
     fun updatelistRM(mDataList: List<Result>){
         dataList = mDataList
         notifyDataSetChanged()//c9 m2:45
     }
 
-    inner class ThisViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener{
+    inner class ThisViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnClickListener{ // c7 m3:31
         var textview1  = itemView.textView1
         var imgRM = itemView.imageView
-        var itemView = itemView.setOnClickListener(this)//c9 m1:30
+        var itemView = itemView.setOnClickListener(this)//c7 m3:34 y c9 m1:30
 
 
         override fun onClick(v: View?) {
-//            mpassPersonajesRAM.enviardatos(dataList[adapterPosition])
+        enviarDatos.enviardatos(dataList[adapterPosition])
         }
 
     }
@@ -49,7 +50,7 @@ private var dataList = emptyList<Result>() // c7 m 1:00
 
     override fun getItemCount() = dataList.size
 
-    interface RAM {
+    interface EnviarDatos { //c/ m3:25 y passa al datos al primer fragmento
         fun enviardatos(mdcPersonajesRAM: Result)
     }
 

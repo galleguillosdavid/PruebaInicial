@@ -19,7 +19,7 @@ import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Result.Result
 import kotlinx.android.synthetic.main.fragment_first.*
 
 
-class FirstFragment : Fragment(), GeneralAdapter.RAM {
+class FirstFragment : Fragment(), GeneralAdapter.EnviarDatos {
 
     lateinit var mViewmodel: GeneralViewModel
 // 1 declaro la variable del view model
