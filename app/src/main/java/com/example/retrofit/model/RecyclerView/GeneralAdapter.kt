@@ -13,8 +13,9 @@ import com.example.retrofit.UI.FirstFragment
 import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Result.Result
 import kotlinx.android.synthetic.main.item_list_view.view.*
 
-class GeneralAdapter(var mpassPersonajesRAM: FirstFragment): RecyclerView.Adapter<GeneralAdapter.ThisViewHolder>() {
-    private var dataList = emptyList<Result>()
+class GeneralAdapter(firstFragment: FirstFragment) : RecyclerView.Adapter<GeneralAdapter.ThisViewHolder>() {
+
+private var dataList = emptyList<Result>() // c7 m 1:00
 
     fun updatelistRM(mDataList: List<Result>){
         dataList = mDataList
@@ -28,7 +29,7 @@ class GeneralAdapter(var mpassPersonajesRAM: FirstFragment): RecyclerView.Adapte
 
 
         override fun onClick(v: View?) {
-            mpassPersonajesRAM.enviardatos(dataList[adapterPosition])
+//            mpassPersonajesRAM.enviardatos(dataList[adapterPosition])
         }
 
     }
