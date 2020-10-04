@@ -57,7 +57,7 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mViewModel.exposeLiveDataFromServer().observe(viewLifecycleOwner, Observer {
-            Creado.setText(creado)
+//            Creado.setText(creado)
             Especie.setText(especie)
             Nombre.setText(nombre)
             Estado.setText(estado)
