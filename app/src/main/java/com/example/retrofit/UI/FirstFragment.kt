@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.retrofit.R
@@ -49,22 +49,24 @@ class FirstFragment : Fragment(), GeneralAdapter.EnviarDatos {
         mViewmodel.exposeLiveDataFromServer().observe(viewLifecycleOwner, Observer {
 //      Observo que la funcion retorne un live data desde el viewmodel
             Log.d("prueba", it.toString())
-
             mAdapter.updatelistRM(it)
         })
 
     }
 
-    override fun enviardatos(mdcPersonajesRAM: Result) {
-
-
+    override fun enviardatos(mdcPersonajesRAM: Result) { //c7,2 m46, aqui traemos el objeto seleccionado
             val mBundle = Bundle()
             mBundle.putString("creado", mdcPersonajesRAM.created)
             mBundle.putString("especie", mdcPersonajesRAM.species)
             mBundle.putString("nombre", mdcPersonajesRAM.name)
             mBundle.putString("estado", mdcPersonajesRAM.status)
             mBundle.putString("genero", mdcPersonajesRAM.gender)
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, mBundle)
+            mBundle.putString("imagen", mdcPersonajesRAM.image)
+            mBundle.putString("type", mdcPersonajesRAM.type)
+            mBundle.putString("url", mdcPersonajesRAM.url)
+            mBundle.putString("locationName", mdcPersonajesRAM.location.name)
+        Toast.makeText(context, "Seleccionaste ${mdcPersonajesRAM.name}", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, mBundle)//c 7,2 m43 pasar bundle de un fragmento a otro
 
     }
 }
