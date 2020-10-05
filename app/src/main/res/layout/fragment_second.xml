@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="com.example.retrofit.UI.Personajes.SecondFragment">
 
     <ScrollView
@@ -18,13 +18,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="clip_vertical|center_vertical"
             android:orientation="vertical">
 
 
             <ImageView
                 android:id="@+id/Imagen"
                 android:layout_width="match_parent"
-                android:layout_height="306dp"
+                android:layout_height="300dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginBottom="52dp"
                 app:layout_constraintBottom_toTopOf="@+id/Creado"
@@ -34,9 +35,10 @@
                 tools:src="@tools:sample/avatars" />
 
             <TableLayout
-                android:layout_width="351dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp">
+                android:layout_marginStart="30dp"
+                android:background="#AE040404">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -54,31 +56,19 @@
                         android:layout_marginRight="0dp"
                         android:layout_marginBottom="0dp"
 
-                        android:text="Sexo" />
+                        android:text="Sexo"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Genero"
-                        android:layout_width="250dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="25dp"
                         android:layout_marginStart="10dp"
                         android:text="Sexo"
+                        android:textColor="#FFFFFF"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Estado" />
 
-                    <TextView
-                        android:id="@+id/Type"
-                        android:layout_width="0dp"
-                        android:layout_height="25dp"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:text="TextView"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/Genero" />
                 </TableRow>
 
                 <TableRow
@@ -97,14 +87,16 @@
                         android:layout_marginRight="0dp"
                         android:layout_marginBottom="0dp"
 
-                        android:text="Nombre" />
+                        android:text="Nombre"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Nombre"
-                        android:layout_width="250dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="25dp"
                         android:layout_marginStart="10dp"
                         android:text="Nombre"
+                        android:textColor="#FFFFFF"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Especie" />
                 </TableRow>
@@ -125,14 +117,16 @@
                         android:layout_marginRight="0dp"
                         android:layout_marginBottom="0dp"
 
-                        android:text="Creado" />
+                        android:text="Creado"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Creado"
-                        android:layout_width="250dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="25dp"
                         android:layout_marginStart="10dp"
                         android:text="Creado"
+                        android:textColor="#FFFFFF"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Type" />
                 </TableRow>
@@ -153,14 +147,16 @@
                         android:layout_marginRight="0dp"
                         android:layout_marginBottom="0dp"
 
-                        android:text="Ubicación" />
+                        android:text="Ubicación"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/LocationName"
-                        android:layout_width="250dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="25dp"
                         android:layout_marginStart="10dp"
-                        android:text="Trabajo"
+                        android:text="Ubicacion"
+                        android:textColor="#FFFFFF"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Linkapi" />
                 </TableRow>
@@ -181,14 +177,16 @@
                         android:layout_marginRight="0dp"
                         android:layout_marginBottom="0dp"
 
-                        android:text="Vivo o muerto?" />
+                        android:text="Vivo o muerto?"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Estado"
-                        android:layout_width="250dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="25dp"
                         android:layout_marginStart="10dp"
                         android:text="Vivo"
+                        android:textColor="#FFFFFF"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Nombre" />
                 </TableRow>
@@ -209,7 +207,8 @@
                         android:layout_marginRight="0dp"
                         android:layout_marginBottom="0dp"
 
-                        android:text="Raza" />
+                        android:text="Raza"
+                        android:textColor="#FFFFFF" />
 
                     <TextView
                         android:id="@+id/Especie"
@@ -217,28 +216,48 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:text="Raza"
+                        android:textColor="#FFFFFF"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Creado" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/Type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type" />
+                </TableRow>
 
             </TableLayout>
 
-            <Button
-                android:id="@+id/button_second"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/previous"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/previous" />
+
+                <Button
+                    android:id="@+id/Inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inicio" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Button" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

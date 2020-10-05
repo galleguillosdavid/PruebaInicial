@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/fragmentZero">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -23,17 +23,14 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
-        <action
-            android:id="@+id/action_SecondFragment_to_blankFragment"
-            app:destination="@id/blankFragment" />
     </fragment>
     <fragment
-        android:id="@+id/blankFragment"
-        android:name="com.example.retrofit.UI.BlankFragment"
-        android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" >
+        android:id="@+id/fragmentZero"
+        android:name="com.example.retrofit.UI.General.FragmentZero"
+        android:label="fragment_zero"
+        tools:layout="@layout/fragment_zero" >
         <action
-            android:id="@+id/action_blankFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_fragmentZero_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
