@@ -75,6 +75,5 @@ class SecondFragment : Fragment(){
             Type.setText(type)
             LocationName.setText(locationName)
         })
-
     }
   }
