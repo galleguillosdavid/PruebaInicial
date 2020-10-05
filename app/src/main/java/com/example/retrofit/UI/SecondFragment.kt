@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.retrofit.R
 import com.example.retrofit.ViewModel.GeneralViewModel
@@ -75,5 +76,8 @@ class SecondFragment : Fragment(){
             Type.setText(type)
             LocationName.setText(locationName)
         })
+        button_second.setOnClickListener {
+            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+        }
     }
-  }
+}
