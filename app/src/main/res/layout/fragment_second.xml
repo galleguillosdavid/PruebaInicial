@@ -10,6 +10,7 @@
         android:id="@+id/scrollView3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -23,7 +24,8 @@
             <ImageView
                 android:id="@+id/Imagen"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="306dp"
+                android:layout_gravity="center_vertical"
                 android:layout_marginBottom="52dp"
                 app:layout_constraintBottom_toTopOf="@+id/Creado"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -32,8 +34,9 @@
                 tools:src="@tools:sample/avatars" />
 
             <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="351dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -41,8 +44,8 @@
 
                     <TextView
                         android:id="@+id/textView"
-                        android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_margin="0dp"
                         android:layout_marginStart="0dp"
                         android:layout_marginLeft="0dp"
@@ -57,14 +60,8 @@
                         android:id="@+id/Genero"
                         android:layout_width="250dp"
                         android:layout_height="25dp"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:text="TextView"
+                        android:layout_marginStart="10dp"
+                        android:text="Sexo"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Estado" />
 
@@ -106,14 +103,8 @@
                         android:id="@+id/Nombre"
                         android:layout_width="250dp"
                         android:layout_height="25dp"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:text="TextView"
+                        android:layout_marginStart="10dp"
+                        android:text="Nombre"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Especie" />
                 </TableRow>
@@ -134,20 +125,14 @@
                         android:layout_marginRight="0dp"
                         android:layout_marginBottom="0dp"
 
-                        android:text="Link" />
+                        android:text="Creado" />
 
                     <TextView
-                        android:id="@+id/Dinter"
+                        android:id="@+id/Creado"
                         android:layout_width="250dp"
                         android:layout_height="25dp"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:text="TextView"
+                        android:layout_marginStart="10dp"
+                        android:text="Creado"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Type" />
                 </TableRow>
@@ -168,22 +153,16 @@
                         android:layout_marginRight="0dp"
                         android:layout_marginBottom="0dp"
 
-                        android:text="Trabajo" />
+                        android:text="Ubicación" />
 
                     <TextView
                         android:id="@+id/LocationName"
                         android:layout_width="250dp"
                         android:layout_height="25dp"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:text="TextView"
+                        android:layout_marginStart="10dp"
+                        android:text="Trabajo"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/Dinter" />
+                        app:layout_constraintTop_toBottomOf="@+id/Linkapi" />
                 </TableRow>
 
                 <TableRow
@@ -208,14 +187,8 @@
                         android:id="@+id/Estado"
                         android:layout_width="250dp"
                         android:layout_height="25dp"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:text="TextView"
+                        android:layout_marginStart="10dp"
+                        android:text="Vivo"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Nombre" />
                 </TableRow>
@@ -240,19 +213,17 @@
 
                     <TextView
                         android:id="@+id/Especie"
-                        android:layout_width="250dp"
-                        android:layout_height="25dp"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:text="TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Raza"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/Creado" />
                 </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
                 <TableRow
                     android:layout_width="match_parent"

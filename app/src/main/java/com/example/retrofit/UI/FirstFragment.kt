@@ -64,6 +64,8 @@ class FirstFragment : Fragment(), GeneralAdapter.EnviarDatos {
             mBundle.putString("imagen", mdcPersonajesRAM.image)
             mBundle.putString("type", mdcPersonajesRAM.type)
             mBundle.putString("url", mdcPersonajesRAM.url)
+            mBundle.putString("episode", mdcPersonajesRAM.episode.toString())
+            mBundle.putString("location", mdcPersonajesRAM.location.toString())
             mBundle.putString("locationName", mdcPersonajesRAM.location.name)
         Toast.makeText(context, "Seleccionaste ${mdcPersonajesRAM.name}", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, mBundle)//c 7,2 m43 pasar bundle de un fragmento a otro
