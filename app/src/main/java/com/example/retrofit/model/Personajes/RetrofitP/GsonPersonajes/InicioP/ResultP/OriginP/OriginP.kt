@@ -1,9 +1,9 @@
-package com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Result.Location
+package com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP.OriginP
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Location(
+data class OriginP(
     @SerializedName("name")
     val name: String,
     @SerializedName("url")

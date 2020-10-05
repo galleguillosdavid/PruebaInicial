@@ -1,18 +1,18 @@
-package com.example.retrofit.model.Retrofit
+package com.example.retrofit.model.Personajes.RetrofitP.RetroP
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RetrofitClient {
+class RetrofitClientP {
     companion object{
         private const val URL_BASE = "https://rickandmortyapi.com/api/"
 
 
-        fun getRetrofitClient(): ApiInterface {
+        fun getRetrofitClient(): ApiInterfaceP {
             val mCRetrofit = Retrofit.Builder().baseUrl(URL_BASE)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-            return mCRetrofit.create(ApiInterface::class.java)
+            return mCRetrofit.create(ApiInterfaceP::class.java)
         }
     }
 }

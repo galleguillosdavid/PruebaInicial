@@ -1,16 +1,16 @@
-package com.example.retrofit.model.Retrofit
+package com.example.retrofit.model.Personajes.RetrofitP.RetroP
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Result.Result
-import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.DcPersonajesRAM
+import com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP.ResultP
+import com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.DcPersonajesRAM
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class Repository () {
-    private val services = RetrofitClient.getRetrofitClient()
-    val mLiveData = MutableLiveData<List<Result>>(emptyList())
+class RepositoryP () {
+    private val services = RetrofitClientP.getRetrofitClient()
+    val mLiveData = MutableLiveData<List<ResultP>>(emptyList())
 
     //la vieja confiable
     fun getDataFromServer() {

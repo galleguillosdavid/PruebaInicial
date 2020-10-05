@@ -1,4 +1,4 @@
-package com.example.retrofit.UI
+package com.example.retrofit.UI.General
 
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton

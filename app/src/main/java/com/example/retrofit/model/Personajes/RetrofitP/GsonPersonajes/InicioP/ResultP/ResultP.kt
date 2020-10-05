@@ -1,11 +1,11 @@
-package com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Result
+package com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP
 
 
-import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Result.Location.Location
-import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Result.Origin.Origin
+import com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP.LocationP.LocationP
+import com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP.OriginP.OriginP
 import com.google.gson.annotations.SerializedName
 
-data class Result(
+data class ResultP(
     @SerializedName("created")
     val created: String,
     @SerializedName("episode")
@@ -17,11 +17,11 @@ data class Result(
     @SerializedName("image")
     val image: String,
     @SerializedName("location")
-    val location: Location,
+    val location: LocationP,
     @SerializedName("name")
     val name: String,
     @SerializedName("origin")
-    val origin: Origin,
+    val origin: OriginP,
     @SerializedName("species")
     val species: String,
     @SerializedName("status")

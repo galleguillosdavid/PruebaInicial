@@ -1,7 +1,7 @@
 //c9 m:26
-package com.example.retrofit.UI
+package com.example.retrofit.UI.Personajes
 
-import com.example.retrofit.ViewModel.GeneralViewModel
+import com.example.retrofit.ViewModel.ViewModelPersonajes
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -14,20 +14,20 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.retrofit.R
-import com.example.retrofit.model.RecyclerView.GeneralAdapter
-import com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Result.Result
+import com.example.retrofit.model.Personajes.RecyclerViewPersonajes.AdapterPersonajes
+import com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP.ResultP
 import kotlinx.android.synthetic.main.fragment_first.*
 
 
-class FirstFragment : Fragment(), GeneralAdapter.EnviarDatos {
+class FirstFragment : Fragment(), AdapterPersonajes.EnviarDatos {
 
-    lateinit var mViewmodel: GeneralViewModel
+    lateinit var mViewmodel: ViewModelPersonajes
 // 1 declaro la variable del view model
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        mViewmodel = ViewModelProvider(this).get(GeneralViewModel::class.java)
+        mViewmodel = ViewModelProvider(this).get(ViewModelPersonajes::class.java)
 //    Inflo el layaut para este fragmento
     }
 
@@ -42,7 +42,7 @@ class FirstFragment : Fragment(), GeneralAdapter.EnviarDatos {
         super.onViewCreated(view, savedInstanceState)
 
         val mRecyclerView = recyclerView1 //c7 m1:22 instancio el elemento visual Rv
-        val mAdapter = GeneralAdapter(this)//c7 m1:23 instancio el objeto de la clase adapter
+        val mAdapter = AdapterPersonajes(this)//c7 m1:23 instancio el objeto de la clase adapter
         mRecyclerView.adapter = mAdapter //c7 m1:25
         mRecyclerView.layoutManager = GridLayoutManager(context,3) //c7 m1:25
 
@@ -54,7 +54,7 @@ class FirstFragment : Fragment(), GeneralAdapter.EnviarDatos {
 
     }
 
-    override fun enviardatos(mdcPersonajesRAM: Result) { //c7,2 m46, aqui traemos el objeto seleccionado
+    override fun enviardatos(mdcPersonajesRAM: ResultP) { //c7,2 m46, aqui traemos el objeto seleccionado
             val mBundle = Bundle()
             mBundle.putString("creado", mdcPersonajesRAM.created)
             mBundle.putString("especie", mdcPersonajesRAM.species)

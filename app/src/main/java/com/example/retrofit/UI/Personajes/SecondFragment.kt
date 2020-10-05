@@ -1,18 +1,16 @@
-package com.example.retrofit.UI
+package com.example.retrofit.UI.Personajes
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ListView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.retrofit.R
-import com.example.retrofit.ViewModel.GeneralViewModel
+import com.example.retrofit.ViewModel.ViewModelPersonajes
 import kotlinx.android.synthetic.main.fragment_second.*
 
 /**
@@ -22,7 +20,7 @@ import kotlinx.android.synthetic.main.fragment_second.*
 class SecondFragment : Fragment(){
 //    class fragment_Arr :Fragment(), View.OnClickListener {
 
-    lateinit var mViewModel: GeneralViewModel//c7 2:45
+    lateinit var mViewModel: ViewModelPersonajes//c7 2:45
     private var creado: String? = null   //c7,2 m46
     private var especie: String? = null   //c7,2 m46
     private var nombre: String? = null   //c7,2 m46
@@ -39,7 +37,7 @@ class SecondFragment : Fragment(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mViewModel = ViewModelProvider(this).get(GeneralViewModel::class.java)
+        mViewModel = ViewModelProvider(this).get(ViewModelPersonajes::class.java)
 
         arguments?.let {//clase 5 m1:49   y c7,2 m46
             creado = it.getString("creado")

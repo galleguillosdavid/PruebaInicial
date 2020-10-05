@@ -1,9 +1,9 @@
-package com.example.retrofit.model.Retrofit.rickandmorty.Inicio.Info
+package com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.InfoP
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Info(
+data class InfoP(
     @SerializedName("count")
     val count: Int,
     @SerializedName("next")
