@@ -1,8 +1,10 @@
 package com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.InfoP
 
 
+import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
 
+@Entity
 data class InfoP(
     @SerializedName("count")
     val count: Int,

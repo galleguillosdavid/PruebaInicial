@@ -1,5 +1,6 @@
 package com.example.retrofit.UI.Personajes
 
+import android.app.PendingIntent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -77,5 +78,11 @@ class SecondFragment : Fragment(){
         button_second.setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
+        Inicio.setOnClickListener {
+            findNavController().navigate(R.id.action_SecondFragment_to_fragmentZero)
+        }
+
     }
+
+
 }

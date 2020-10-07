@@ -1,10 +1,12 @@
 package com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP
 
 
+import androidx.room.Entity
 import com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP.LocationP.LocationP
 import com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP.OriginP.OriginP
 import com.google.gson.annotations.SerializedName
 
+@Entity
 data class ResultP(
     @SerializedName("created")
     val created: String,
