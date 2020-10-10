@@ -1,4 +1,4 @@
-package com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.InfoP
+package com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InfoP
 
 
 import androidx.room.Entity

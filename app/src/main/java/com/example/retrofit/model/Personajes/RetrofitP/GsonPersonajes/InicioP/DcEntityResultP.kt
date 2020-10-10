@@ -1,4 +1,4 @@
-package com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP
+package com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP
 
 
 import androidx.room.Entity
@@ -6,8 +6,8 @@ import com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.Re
 import com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP.OriginP.OriginP
 import com.google.gson.annotations.SerializedName
 
-@Entity
-data class ResultP(
+@Entity (tableName = "DcEntityResultP_table")
+data class DcEntityResultP(
     @SerializedName("created")
     val created: String,
     @SerializedName("episode")

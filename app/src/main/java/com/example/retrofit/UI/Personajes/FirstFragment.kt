@@ -15,7 +15,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.retrofit.R
 import com.example.retrofit.model.Personajes.RecyclerViewPersonajes.AdapterPersonajes
-import com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.ResultP.ResultP
+import com.example.retrofit.model.Personajes.RetrofitP.GsonPersonajes.InicioP.DcEntityResultP
 import kotlinx.android.synthetic.main.fragment_first.*
 
 
@@ -54,7 +54,7 @@ class FirstFragment : Fragment(), AdapterPersonajes.EnviarDatos {
 
     }
 
-    override fun enviardatos(mdcPersonajesRAM: ResultP) { //c7,2 m46, aqui traemos el objeto seleccionado
+    override fun enviardatos(mdcPersonajesRAM: DcEntityResultP) { //c7,2 m46, aqui traemos el objeto seleccionado
             val mBundle = Bundle()
             mBundle.putString("creado", mdcPersonajesRAM.created)
             mBundle.putString("especie", mdcPersonajesRAM.species)

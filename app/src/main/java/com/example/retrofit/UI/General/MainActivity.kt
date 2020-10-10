@@ -7,15 +7,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.example.retrofit.R
+import com.example.retrofit.model.Personajes.Room.AppPersonajes
 
 class MainActivity : AppCompatActivity() {
+
+    val app = applicationContext as AppPersonajes
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-
+        val todosLosPersonajes = app.room.ReturnPersonajes().getAll()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
